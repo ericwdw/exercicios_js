@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão Laranjas</title>
+</head>
+
+<body>
+    <script>
+
+        function divisaoLaranjas(quantidade,numeroVizinhos){
+            return quantidade/(numeroVizinhos);
+        }
+
+        var numeroLaranjas = prompt("Informe o número de laranjas que serão divididas")
+        var vizinhos = prompt("Informe a quantidade de pessoas que receberão laranjas ")
+        document.write("O número de laranjas que cada um deverá receber é: " + Math.round(divisaoLaranjas(numeroLaranjas,vizinhos)));
+        document.write("<br>");
+
+
+        var sobraRateio = divisaoLaranjas(numeroLaranjas,vizinhos)/(vizinhos - 1);
+        var vizinhosNovo = prompt("Informe a quantidade de pessoas que receberão as suas laranjas ");
+        document.write("Cada vizinho receberá mais " + sobraRateio/vizinhosNovo + " laranjas");
+
+    </script>
+</body>
+</html>
