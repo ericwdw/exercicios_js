@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+</head>
+
+<body>
+    <script>
+
+        function arredondar(n1){
+            return Math.round(n1*1000)/1000;
+        }
+
+        function impostoPizza(vendaPizza){
+            var imposto = (vendaPizza * (8.9/100) );
+            return arredondar(imposto);
+        }
+
+        var nomePizza = prompt("Por favor, informe o nome da pizza vendida");
+        var custoPizza = prompt("Por favor, informe o custo de fabricação da pizza de " + nomePizza);
+        var valorVendaPizza = prompt("Por favor, informe o valor de venda da pizza de " + nomePizza);
+        var lucroLiquido = (valorVendaPizza - custoPizza - impostoPizza(valorVendaPizza));
+
+        document.write("Para a pizza de sabor " + nomePizza +  " o lucro líquido foi de R$ " + lucroLiquido + " e o imposto foi de " + impostoPizza(valorVendaPizza));
+        
+    </script>
+</body>
+</html>
