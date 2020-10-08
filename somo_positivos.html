@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma Positivos</title>
+</head>
+
+<body>
+    <script>
+
+        var listaNumero = [-1,3,27,-9000,4,4,4,-0.5,2,-5];
+        
+        function filtrarNegativos(arr){
+
+            for(var i = 0; i<arr.lenght; i++){
+                var listaPositivo = [];
+                var elemento = arr[i]
+                if(elemento > 0){
+                    listaPositivo.push(elemento);
+                }
+            }
+
+            return listaPositivo;
+
+        } 
+
+        function somaNumero(arr){
+
+            var soma = 0;
+
+            for(var i = 0; i < arr.lenght; i++){
+
+                var elemento = arr[i]
+
+                soma+=elemento
+            }
+
+            return soma;
+        }
+
+        var arrayFiltrado = filtrarNegativos(listaNumero)
+
+        console.log(arrayFiltrado);
+
+
+    </script>
+    
+</body>
+</html>
